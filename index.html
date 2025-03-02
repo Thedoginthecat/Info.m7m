@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mohammed Al-Surmi | Global Business Catalyst</title>
+
+        <!-- SEO Meta Tags -->
+        <meta
+            name="description"
+            content="Global Business Catalyst specializing in international sales, marketing, operations & strategy. Let's expand your international footprint!"
+        />
+        <meta
+            name="keywords"
+            content="International Business, Global Sales, Marketing Strategy, Operations Management, Business Consulting, International Trade, Business Development, Global Markets"
+        />
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            :root {
+                --primary: hsl(220, 70%, 50%);
+                --background: #ffffff;
+                --text: #1a1a1a;
+                --muted: #666666;
+                --accent: #f5f5f5;
+                --border: #e5e5e5;
+            }
+
+            [data-theme="dark"] {
+                --background: #1a1a1a;
+                --text: #ffffff;
+                --muted: #a0a0a0;
+                --accent: #2a2a2a;
+                --border: #333333;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Inter", sans-serif;
+            }
+
+            body {
+                background-color: var(--background);
+                color: var(--text);
+                transition: all 0.3s ease;
+            }
+
+            header {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                z-index: 50;
+                background-color: rgba(var(--background), 0.8);
+                backdrop-filter: blur(8px);
+                border-bottom: 1px solid var(--border);
+                padding: 1rem;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 1rem;
+            }
+
+            nav {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            @media (min-width: 768px) {
+                .nav-links {
+                    display: flex;
+                    gap: 1.5rem;
+                }
+            }
+
+            .nav-link {
+                color: var(--text);
+                text-decoration: none;
+                font-size: 0.875rem;
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+
+            .nav-link:hover {
+                color: var(--primary);
+            }
+
+            .button {
+                padding: 0.5rem 1rem;
+                border-radius: 0.375rem;
+                border: none;
+                cursor: pointer;
+                font-weight: 500;
+                transition: all 0.3s ease;
+            }
+
+            .button-icon {
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 0.375rem;
+                border: 1px solid var(--border);
+                background: transparent;
+                color: var(--text);
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+            }
+
+            .button-icon:hover {
+                background-color: var(--accent);
+            }
+
+            section {
+                padding: 6rem 0;
+            }
+
+            .hero {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                background: linear-gradient(
+                    to bottom,
+                    var(--background),
+                    var(--accent)
+                );
+            }
+
+            .hero-content {
+                max-width: 48rem;
+                margin: 0 auto;
+                padding: 0 1rem;
+            }
+
+            h1 {
+                font-size: 3rem;
+                font-weight: 700;
+                margin-bottom: 1.5rem;
+                background: linear-gradient(
+                    to right,
+                    var(--primary),
+                    rgba(var(--primary), 0.8)
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .subtitle {
+                font-size: 1.5rem;
+                color: var(--muted);
+                margin-bottom: 2rem;
+            }
+
+            .card {
+                background-color: var(--background);
+                border-radius: 0.5rem;
+                border: 1px solid var(--border);
+                padding: 1.5rem;
+                transition: all 0.3s ease;
+            }
+
+            .card:hover {
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .grid {
+                display: grid;
+                gap: 1.5rem;
+            }
+
+            @media (min-width: 768px) {
+                .grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (min-width: 1024px) {
+                .grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            .form-group {
+                margin-bottom: 1.5rem;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: 500;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 0.75rem;
+                border: 1px solid var(--border);
+                border-radius: 0.375rem;
+                background-color: var(--background);
+                color: var(--text);
+            }
+
+            .error {
+                color: #ef4444;
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+            }
+
+            .social-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+
+            [data-lang="ar"] {
+                direction: rtl;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="container">
+                <div class="nav-links">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#certifications" class="nav-link"
+                        >Certifications</a
+                    >
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <button
+                    class="button-icon"
+                    id="themeToggle"
+                    aria-label="Toggle theme"
+                >
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button
+                    class="button-icon"
+                    id="langToggle"
+                    aria-label="Toggle language"
+                >
+                    EN
+                </button>
+                <button
+                    class="button-icon menu-toggle"
+                    aria-label="Toggle menu"
+                >
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Global Business Catalyst</h1>
+                    <p class="subtitle">
+                        Driving Growth in Sales, Marketing, Operations &
+                        Strategy
+                    </p>
+                    <p class="text-primary">
+                        Let's Expand Your International Footprint!
+                    </p>
+                </div>
+            </section>
+
+            <section id="about" class="container">
+                <h2>About Me</h2>
+                <div class="card">
+                    <p>
+                        International Business Administration graduate with
+                        expertise in global sales, marketing, and operations
+                        management.
+                    </p>
+                </div>
+            </section>
+
+            <section id="services" class="container">
+                <h2>Services</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>International Sales Representative</h3>
+                    </div>
+                    <div class="card">
+                        <h3>Global Manager</h3>
+                    </div>
+                    <div class="card">
+                        <h3>Operations Manager</h3>
+                    </div>
+                    <div class="card">
+                        <h3>Management Consulting</h3>
+                    </div>
+                    <div class="card">
+                        <h3>General Manager</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section id="certifications" class="container">
+                <h2>Certifications</h2>
+                <div class="grid">
+                    <!-- Certifications will be dynamically added here -->
+                </div>
+            </section>
+
+            <section id="contact" class="container">
+                <h2>Contact</h2>
+                <div class="card">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required />
+                            <div class="error" id="nameError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                            />
+                            <div class="error" id="emailError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" name="age" required />
+                            <div class="error" id="ageError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea
+                                id="description"
+                                name="description"
+                                rows="4"
+                                required
+                            ></textarea>
+                            <div class="error" id="descriptionError"></div>
+                        </div>
+                        <button type="submit" class="button">
+                            Send Message
+                        </button>
+                    </form>
+                    <div class="social-buttons">
+                        <a
+                            href="mailto:mohammedalsurmi01@gmail.com"
+                            class="button-icon"
+                            aria-label="Send email"
+                        >
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/mohammed-al-surmi-036012354"
+                            target="_blank"
+                            class="button-icon"
+                            aria-label="Visit LinkedIn profile"
+                        >
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            // Theme Toggle
+            const themeToggle = document.getElementById("themeToggle");
+            const sunIcon = '<i class="fas fa-sun"></i>';
+            const moonIcon = '<i class="fas fa-moon"></i>';
+
+            function setTheme(isDark) {
+                document.body.setAttribute(
+                    "data-theme",
+                    isDark ? "dark" : "light",
+                );
+                themeToggle.innerHTML = isDark ? moonIcon : sunIcon;
+                localStorage.setItem("theme", isDark ? "dark" : "light");
+            }
+
+            themeToggle.addEventListener("click", () => {
+                const isDark =
+                    document.body.getAttribute("data-theme") === "dark";
+                setTheme(!isDark);
+            });
+
+            // Initialize theme
+            const savedTheme = localStorage.getItem("theme") || "light";
+            setTheme(savedTheme === "dark");
+
+            // Language Toggle
+            const langToggle = document.getElementById("langToggle");
+            const translations = {
+                en: {
+                    about: "About",
+                    services: "Services",
+                    certifications: "Certifications",
+                    contact: "Contact",
+                    name: "Name",
+                    email: "Email",
+                    age: "Age",
+                    description: "Description",
+                    send: "Send Message",
+                },
+                ar: {
+                    about: "عني",
+                    services: "الخدمات",
+                    certifications: "الشهادات",
+                    contact: "اتصل بي",
+                    name: "الاسم",
+                    email: "البريد الإلكتروني",
+                    age: "العمر",
+                    description: "الوصف",
+                    send: "إرسال الرسالة",
+                },
+            };
+
+            function setLanguage(lang) {
+                document.body.setAttribute("data-lang", lang);
+                langToggle.textContent = lang === "en" ? "عربي" : "EN";
+                localStorage.setItem("lang", lang);
+
+                // Update text content
+                const elements = document.querySelectorAll("[data-translate]");
+                elements.forEach((element) => {
+                    const key = element.getAttribute("data-translate");
+                    element.textContent = translations[lang][key];
+                });
+            }
+
+            langToggle.addEventListener("click", () => {
+                const currentLang =
+                    document.body.getAttribute("data-lang") || "en";
+                setLanguage(currentLang === "en" ? "ar" : "en");
+            });
+
+            // Initialize language
+            const savedLang = localStorage.getItem("lang") || "en";
+            setLanguage(savedLang);
+
+            // Form Handling
+            const contactForm = document.getElementById("contactForm");
+            contactForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const age = document.getElementById("age").value;
+                const description =
+                    document.getElementById("description").value;
+
+                // Simple validation
+                let isValid = true;
+
+                if (name.length < 2) {
+                    document.getElementById("nameError").textContent =
+                        "Name must be at least 2 characters";
+                    isValid = false;
+                }
+
+                if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                    document.getElementById("emailError").textContent =
+                        "Invalid email address";
+                    isValid = false;
+                }
+
+                if (!age.match(/^\d+$/)) {
+                    document.getElementById("ageError").textContent =
+                        "Age must be a number";
+                    isValid = false;
+                }
+
+                if (description.length < 10) {
+                    document.getElementById("descriptionError").textContent =
+                        "Description must be at least 10 characters";
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    const mailtoLink = `mailto:mohammedalsurmi01@gmail.com?subject=Contact from ${name}&body=Name: ${name}%0D%0AAge: ${age}%0D%0AEmail: ${email}%0D%0A%0D%0ADescription:%0D%0A${description}`;
+                    window.location.href = mailtoLink;
+                }
+            });
+
+            // Generate Certifications
+            const certGrid = document.querySelector("#certifications .grid");
+            for (let i = 1; i <= 20; i++) {
+                const card = document.createElement("div");
+                card.className = "card";
+                card.innerHTML = `
+                <h3>Certification ${i}</h3>
+                <p class="text-muted">2024</p>
+            `;
+                certGrid.appendChild(card);
+            }
+        </script>
+    </body>
+</html>
